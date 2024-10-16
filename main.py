@@ -1,13 +1,21 @@
 # Code goes here and DO NOT FORGET INTRO COMMENTS
+import random
+#random_int =random.randint(1,3)
+#print(random_int)
 print('Welcome to the stick game')
 print('Here is how the game is played')
 #errorchecking goes here
 play_again = 'yes'
 while play_again == 'yes':
-        player = input('either player 1,2,3:')
-        sticks = int(input('How many sticks?'))
+        player = input('either player 1,2,:')
+        sticks = int(input('How many sticks will there be to begin with?'))
         while sticks > 0:
+
+
             print(f'it is player {player} turn')
+            if player == '3':
+                sticks_taken = random.randint(1, 3)
+                print(f'Player 3 has taken {sticks_taken} sticks')
             sticks_taken = int(input('How many sticks would you like to take?'))
             #errorchecking here
             sticks = sticks - int(sticks_taken)
@@ -18,5 +26,6 @@ while play_again == 'yes':
                 player = '3'
             else:
                 player = '1'
+
         print(f'player {player} lost. Thank you for playing!')
         play_again = input('Do you want to play again?(yes/no)')
