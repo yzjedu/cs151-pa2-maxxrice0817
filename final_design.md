@@ -3,7 +3,8 @@
 1. Print 'WELCOME TO THE STICK GAME'
 2. output 'The game is played by players taking sticks from a set of 21 sticks and the player to take the last stick losses'
 3. set player to one 
-4. set sticks to 21
+4. set starting sticks to user inputs
+   5. If user input is not an integer output please enter an integer
 5. While sticks is greater then 0
 - 5A. ask the value of player to input number of sticks they will take 
 - 5B. set sticks to number of sticks minus sticks taken
