@@ -23,7 +23,7 @@ while play == ('yes'):
         if player != ('1') and player != ('2'):
             player = input('Please enter either integer 1 or 2: ')
         sticks = int(input('How many sticks will there be to begin with?'))
-        while sticks > 0:
+        while sticks > 1:
             if player == '1' or player == '2':
                 print(f'it is player {player} turn')
                 sticks_taken = int(input('How many sticks would you like to take between 1 and 3?'))
@@ -32,19 +32,20 @@ while play == ('yes'):
                     print(f'Player 3 has taken {sticks_taken} stick')
             sticks = sticks - sticks_taken
             print(f'there is now {sticks} sticks left')
+        while sticks > 1:
             if player == '1':
                      player = '2'
             elif player == '2':
                     player = '3'
             elif player == '3':
                     player = '1'
-        #counting and displaying number of losses per player
-            if player == '1':
-                p1_loss += 1
-            if player == '2':
-                p2_loss += 1
-            if player == '3':
-                p3_loss += 1
+            #counting and displaying number of losses per player
+        if player == '1':
+            p1_loss += 1
+        if player == '2':
+            p2_loss += 1
+        if player == '3':
+            p3_loss += 1
         print(f'player {player} lost. Thank you for playing!')
         print('Player one losses', p1_loss, '\nPlayer two losses', p2_loss, '\nPlayer three losses', p3_loss)
         play = input('Do you want to play again?(yes/no)').lower()
