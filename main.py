@@ -59,5 +59,5 @@ while play == ('yes'):
 #ending statement if player doesn't want to play again and error checking
         if play == 'no':
                 print('Thank you for playing!')
-        if play != ('yes') and play != ('no'):
+        while play != ('yes') and play != ('no'):
             play = input('Do you want to play again?(yes/no)').lower()
