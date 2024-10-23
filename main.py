@@ -31,10 +31,17 @@ while play == ('yes'):
                 #error checking
                 while sticks_taken > 3 or sticks_taken < 1:
                    sticks_taken = int(input('INVALID INPUT: pick a number between 1 and 3'))
-#code for player 3 who is a computer
+#code for player 3 who is a computer and makes computer smarter when picking number
             if player == '3':
+                if sticks == 2:
+                    sticks_taken = 1
+                elif sticks == 3:
+                    sticks_taken = 2
+                elif sticks == 4:
+                    sticks_taken = 3
+                else:
                     sticks_taken = random.randint(1, 3)
-                    print(f'Player 3 has taken {sticks_taken} stick')
+                print(f'Player 3 has taken {sticks_taken} stick')
             sticks = sticks - sticks_taken
             print(f'there is now {sticks} sticks left')
 #switches players

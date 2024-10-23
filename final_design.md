@@ -24,19 +24,25 @@
        - 10. while sticks taken is greater than 3 or less than 1
         - 11. ask user to pick a number of sticks to take between 1 and 3 and set that to sticks taken
        - 12. if value of player is 3 
-         - 13. sticks taken is a random integer between 1 and 3
-       - 14. set sticks to number of sticks minus sticks taken
-       - 15. output "there is now (value of sticks) sticks left"
-     - 16. if player equals one 
-          - 17. set players equal to two 
-     - 18. else if players equal to two 
-       - 19. set players equal to three
-   - 20. if player equals one
-     - 21. add one to p1_loss
-   - 22. if player equals two
-     - 23. add one to p2_loss
-   - 24. if player equals to three
-     - 25. add one to p3_loss
+         - 13. if sticks is equal to 2
+             14. player 3 takes 1 stick
+           15. if sticks is equal to 3
+               16. player 3 takes 2 sticks
+           17. if sticks is equal to four
+               18. player 3 takes 3 sticks
+         19. otherwise sticks taken is a random integer between 1 and 3
+       - 20. set sticks to number of sticks minus sticks taken
+       - 21. output "there is now (value of sticks) sticks left"
+     - 22. if player equals one 
+          - 23. set players equal to two 
+     - 24. else if players equal to two 
+       - 25. set players equal to three
+   - 26. if player equals one
+     - 27. add one to p1_loss
+   - 28. if player equals two
+     - 29. add one to p2_loss
+   - 30. if player equals to three
+     - 31. add one to p3_loss
 
 9. output " {value of player} player lost thanks for playing"
 10. out "player one losses {value of p1_loss}, player two losses {value of p2_loss}, player 3 losses {Value of p3_losses}"
