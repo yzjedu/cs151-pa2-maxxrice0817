@@ -13,7 +13,7 @@ p1_loss = 0
 p2_loss = 0
 p3_loss = 0
 
-
+#intro to game and explanation of how game works
 print('Welcome to the stick game')
 print('Here is how the game is played: there will be an initial amount of sticks and the goal is to not left with no sticks left\nplayer one and two will both be played by the two users and player three will be played by a computer.')
 play = input('Would you like to play a game of sticks? yes or no: ')
@@ -32,20 +32,22 @@ while play == ('yes'):
                     print(f'Player 3 has taken {sticks_taken} stick')
             sticks = sticks - sticks_taken
             print(f'there is now {sticks} sticks left')
-        while sticks > 1:
+
             if player == '1':
-                     player = '2'
+                player = '2'
             elif player == '2':
-                    player = '3'
+                player = '3'
             elif player == '3':
-                    player = '1'
-            #counting and displaying number of losses per player
+                player = '1'
+
+#counting and displaying number of losses per player
         if player == '1':
             p1_loss += 1
         if player == '2':
             p2_loss += 1
         if player == '3':
             p3_loss += 1
+
         print(f'player {player} lost. Thank you for playing!')
         print('Player one losses', p1_loss, '\nPlayer two losses', p2_loss, '\nPlayer three losses', p3_loss)
         play = input('Do you want to play again?(yes/no)').lower()
