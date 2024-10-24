@@ -20,7 +20,7 @@ play = input('Would you like to play a game of sticks? yes or no: ').lower()
 #errorchecking goes here
 while play == ('yes'):
         player = input('Which player will start? 1 or 2: ')
-        if player != ('1') and player != ('2'):
+        while player != ('1') and player != ('2'):
             player = input('Please enter either integer 1 or 2: ')
         sticks = int(input('How many sticks will there be to begin with?'))
         #loops until game ends
